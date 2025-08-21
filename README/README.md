@@ -2,6 +2,14 @@
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?logo=power-bi&logoColor=black)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
+## Sommaire
+1. [Objectif](#objectif)
+2. [Méthodologie](#méthodologie)
+3. [Fichiers](#fichiers)
+4. [Exemple du tableau de bord Power BI](#exemple-du-tableau-de-bord-power-bi)
+5. [Variables d’environnement](#variables-denvironnement-requises)
+6. [Reproduire](#reproduire)
+
 
 # Analyse des flux cyclistes à Bruxelles (CB02411)
 **ACP + HCPC + Régression multiple en R** — Connexion directe **MySQL** via `{RMariaDB}` — Dashboard **Power BI**.
@@ -29,7 +37,7 @@ Voici un aperçu du dashboard construit avec Power BI :
 ![Dashboard PowerBI 1](docs/Dashboard%20PowerBI%201.PNG)
 ![Dashboard PowerBI 2](docs/Dashboard%20PowerBI%202.PNG)
 
-  
+
 ### Variables d’environnement requises
 Le script R attend des identifiants de connexion MySQL via `{RMariaDB}`.  
 Avant d’exécuter `code.R`, définissez :
