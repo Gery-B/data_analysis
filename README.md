@@ -6,7 +6,7 @@
 ---
 
 ##  Méthodologie
-- Nettoyage et préparation des données (base SQL exportée en CSV).
+- Nettoyage et préparation des données (Connexion MySQL via RMariaDB).
 - Analyses statistiques avec **R** :
   - **ACP (Analyse en Composantes Principales)** pour réduire la dimensionnalité.
   - **Clustering hiérarchique (HCPC)** pour regrouper les stations selon leur profil d’utilisation.
