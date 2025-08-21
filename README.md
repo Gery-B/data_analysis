@@ -1,59 +1,28 @@
-#  Analyse des flux de mobilité douce à Bruxelles : classification temporelle et modélisation des passages de la station de comptage CB02411
+# Analyse des flux cyclistes à Bruxelles (CB02411)
+**ACP + HCPC + Régression multiple en R** — Connexion directe **MySQL** via `{RMariaDB}` — Dashboard **Power BI**.
 
 ## Objectif
-Étudier l’évolution des flux cyclistes à Bruxelles et identifier les facteurs explicatifs des variations observées, en distinguant notamment les profils de stations selon les périodes (jour/nuit, jours ouvrables, saisons).
+Comprendre l’évolution des passages vélo à Bruxelles (2022–2024), identifier des profils de stations (jour/nuit, semaine/saisons) et modéliser les facteurs explicatifs (calendrier, météo).
 
----
+## Méthodologie
+1) **Données** : connexion MySQL avec `{RMariaDB}` (stations/horaires) + données calendaires (vacances/jours fériés).  
+2) **R (tidyverse)** : nettoyage, features temporelles.  
+3) **ACP (FactoMineR) + HCPC** : typologie de stations.  
+4) **Régression multiple** (avec imputation `mice`, retrait outliers/Cook).  
+5) **Power BI** : tableau de bord interactif (observé vs ajusté, filtres).
 
-##  Méthodologie
-- Nettoyage et préparation des données (Connexion MySQL via RMariaDB).
-- Analyses statistiques avec **R** :
-  - **ACP (Analyse en Composantes Principales)** pour réduire la dimensionnalité.
-  - **Clustering hiérarchique (HCPC)** pour regrouper les stations selon leur profil d’utilisation.
-  - **Régression multiple** pour modéliser les passages sur la borne de référence (CB02411).
-- Visualisations interactives via **Power BI**.
+## Fichiers
+- Script : [`bicycle-project/code.R`](bicycle-project/code.R)  
+- Données calendaires : [`data/Vacances FR-NL.csv`](data/Vacances%20FR-NL.csv)  
+- Rapport PDF : [`results/Analyse-borne-CB02411.pdf`](results/Analyse-borne-CB02411.pdf)  
+- Dashboard : [`results/Dashboard-CB02411.pbix`](results/Dashboard-CB02411.pbix)
 
----
+## Reproduire
+```r
+# Connexion MySQL (adapter les secrets)
+con <- DBI::dbConnect(RMariaDB::MariaDB(),
+                      user="USER", password="***",
+                      dbname="DB", host="HOST", port=3306)
 
-## Contenu du dossier
-- `code.R` → Script R complet (préparation, ACP, clustering, régressions, visualisations).
-- `Vacances FR-NL.csv` → Base de données des jours fériés/vacances scolaires utilisée dans l’analyse.
-- `Dashboard - Analyse de la borne CB02411 - Bochenski Géry.pbix` → Tableau de bord Power BI interactif.
-- `resume.pdf` → Résumé écrit du projet (méthodologie, résultats principaux).
-
----
-
-## Résultats principaux
-- **Profils de stations** identifiés par clustering (jours ouvrables, jour/nuit).
-- **Facteurs explicatifs** des flux mis en évidence par régression.
-- **Dashboard Power BI** permettant :
-  - Analyse temporelle (jour/semaine/mois/saison).
-  - Comparaison entre valeurs observées et ajustées.
-  - Exploration interactive par filtres.
-
----
-
-## Utilisation
-
-- Script R : [bicycle-project/code.R](bicycle-project/code.R)
-- Données calendrier : [data/Vacances FR-NL.csv](data/Vacances%20FR-NL.csv)
-- Rapport PDF : [results/Analyse-borne-CB02411.pdf](results/Analyse-borne-CB02411.pdf)
-- Dashboard PBIX : [results/Dashboard-CB02411.pbix](results/Dashboard-CB02411.pbix)
-
-1. **Exécuter le code R** :  
-   Ouvrir `code.R` dans RStudio → installer les packages nécessaires (packages : RMariaDB, tidyverse, lubridate, FactoMineR, factoextra, mice, performance, broom, ggplot2
-) → lancer l’analyse.
-   
-2. **Explorer le dashboard** :  
-   Ouvrir `Dashboard - Analyse de la borne CB02411 - Bochenski Géry.pbix` dans **Power BI Desktop**.
-
-3. **Lire la synthèse** :  
-   Consulter `resume.pdf` pour une vue d’ensemble.
-
----
-
-## Auteurs
-Projet réalisé par **Géry Bochenski**  
-Certificat universitaire Junior Data Analyst – UCLouvain (2024–2025)
-
----
+# Exécuter l'analyse
+source("bicycle-project/code.R")
