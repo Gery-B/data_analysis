@@ -16,6 +16,22 @@ Comprendre l’évolution des passages vélo à Bruxelles (2022–2024), identif
 - Données calendaires : [`data/Vacances FR-NL.csv`](data/Vacances%20FR-NL.csv)  
 - Rapport PDF : [`results/Analyse-borne-CB02411.pdf`](results/Analyse-borne-CB02411.pdf)  
 - Dashboard : [`results/Dashboard-CB02411.pbix`](results/Dashboard-CB02411.pbix)
+  
+### Variables d’environnement requises
+Le script R attend des identifiants de connexion MySQL via `{RMariaDB}`.  
+Avant d’exécuter `code.R`, définissez :
+
+- `DB_USER` : utilisateur MySQL
+- `DB_PASS` : mot de passe
+- `DB_HOST` : hôte/serveur MySQL
+- `DB_NAME` : nom de la base de données
+
+Exemple (sous Linux/macOS) :
+```bash
+export DB_USER="mon_user"
+export DB_PASS="mon_motdepasse"
+export DB_HOST="localhost"
+export DB_NAME="nom_base"
 
 ## Reproduire
 ```r
