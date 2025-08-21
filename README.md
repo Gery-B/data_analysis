@@ -28,7 +28,8 @@ Comprendre l’évolution des passages vélo à Bruxelles (2022–2024), identif
 - Script : [`bicycle-project/code.R`](bicycle-project/code.R)  
 - Données calendaires : [`data/Vacances FR-NL.csv`](data/Vacances%20FR-NL.csv)  
 - Rapport PDF : [`results/Analyse-borne-CB02411.pdf`](results/Analyse-borne-CB02411.pdf)  
-- Dashboard : [Télécharger le Dashboard (PBIX)](results/Dashboard-CB02411.pbix)
+- Dashboard : [Télécharger le Dashboard (PBIX)](results/Dashboard-CB02411.pbix?raw=1)
+
 
 
 ## Exemple du tableau de bord Power BI
