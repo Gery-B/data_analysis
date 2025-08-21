@@ -53,7 +53,7 @@ export DB_USER="mon_user"
 export DB_PASS="mon_motdepasse"
 export DB_HOST="localhost"
 export DB_NAME="nom_base"
-
+```
 ## Reproduire
 ```r
 # Connexion MySQL (adapter les secrets)
