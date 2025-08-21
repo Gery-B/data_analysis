@@ -34,8 +34,9 @@ Comprendre l’évolution des passages vélo à Bruxelles (2022–2024), identif
 
 Voici un aperçu du dashboard construit avec Power BI :
 
-![Dashboard PowerBI 1](docs/Dashboard%20PowerBI%201.PNG)
-![Dashboard PowerBI 2](docs/Dashboard%20PowerBI%202.PNG)
+![Dashboard Power BI – vue 1](docs/dashboard-powerbi-1.png)
+![Dashboard Power BI – vue 2](docs/dashboard-powerbi-2.png)
+
 
 
 ### Variables d’environnement requises
