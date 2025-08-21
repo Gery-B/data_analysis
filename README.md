@@ -39,6 +39,7 @@ Voici un aperçu du dashboard construit avec Power BI :
 
 
 
+
 ### Variables d’environnement requises
 Le script R attend des identifiants de connexion MySQL via `{RMariaDB}`.  
 Avant d’exécuter `code.R`, définissez :
