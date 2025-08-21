@@ -16,6 +16,14 @@ Comprendre l’évolution des passages vélo à Bruxelles (2022–2024), identif
 - Données calendaires : [`data/Vacances FR-NL.csv`](data/Vacances%20FR-NL.csv)  
 - Rapport PDF : [`results/Analyse-borne-CB02411.pdf`](results/Analyse-borne-CB02411.pdf)  
 - Dashboard : [`results/Dashboard-CB02411.pbix`](results/Dashboard-CB02411.pbix)
+
+## Exemple du tableau de bord Power BI
+
+Voici un aperçu du dashboard construit avec Power BI :
+
+![Dashboard PowerBI 1](README/docs/Dashboard%20PowerBI%201.PNG)
+![Dashboard PowerBI 2](README/docs/Dashboard%20PowerBI%202.PNG)
+
   
 ### Variables d’environnement requises
 Le script R attend des identifiants de connexion MySQL via `{RMariaDB}`.  
