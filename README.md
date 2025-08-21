@@ -34,8 +34,15 @@
 ---
 
 ## Utilisation
+
+- Script R : [bicycle-project/code.R](bicycle-project/code.R)
+- Données calendrier : [data/Vacances FR-NL.csv](data/Vacances%20FR-NL.csv)
+- Rapport PDF : [results/Analyse-borne-CB02411.pdf](results/Analyse-borne-CB02411.pdf)
+- Dashboard PBIX : [results/Dashboard-CB02411.pbix](results/Dashboard-CB02411.pbix)
+
 1. **Exécuter le code R** :  
-   Ouvrir `code.R` dans RStudio → installer les packages nécessaires (`tidyverse`, `FactoMineR`, `factoextra`, `mice`, `performance`, etc.) → lancer l’analyse.
+   Ouvrir `code.R` dans RStudio → installer les packages nécessaires (packages : RMariaDB, tidyverse, lubridate, FactoMineR, factoextra, mice, performance, broom, ggplot2
+) → lancer l’analyse.
    
 2. **Explorer le dashboard** :  
    Ouvrir `Dashboard - Analyse de la borne CB02411 - Bochenski Géry.pbix` dans **Power BI Desktop**.
