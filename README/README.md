@@ -1,3 +1,8 @@
+![R](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white)
+![Power BI](https://img.shields.io/badge/PowerBI-F2C811?logo=power-bi&logoColor=black)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+
 # Analyse des flux cyclistes à Bruxelles (CB02411)
 **ACP + HCPC + Régression multiple en R** — Connexion directe **MySQL** via `{RMariaDB}` — Dashboard **Power BI**.
 
