@@ -1,0 +1,24 @@
+# Fichiers R temporaires
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Cache et libs renv
+renv/library/
+renv/staging/
+__pycache__/
+
+# Sorties intermédiaires
+*.Rout
+*.Rds
+*.RDataTmp
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers lourds / spécifiques
+*.pbix~
+*.tmp
